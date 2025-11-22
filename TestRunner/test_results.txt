@@ -1,0 +1,61 @@
+INFO: Запуск тестов...
+SUITE START: Command line test
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+FAILED: testExpressions | Ошибка: Ошибка в выражении: 2 * 5 expected [15.0] but found [10.0]
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+FAILED: testExpressions | Ошибка: Ошибка в выражении: 3 + 4 * 2 / (1 - 5) expected [2.0] but found [1.0]
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+FAILED: testExpressions | Ошибка: Ошибка в выражении: a=4;b=2;(a+b)*3 expected [20.0] but found [18.0]
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+PASSED: testExpressions
+START: testExpressions
+FAILED: testExpressions | Ошибка: Expression '+' should be valid expected [true] but found [false]
+START: testExpressions
+FAILED: testExpressions | Ошибка: Expression '1+' should be valid expected [true] but found [false]
+START: testExpressions
+FAILED: testExpressions | Ошибка: Expression '1+2+' should be valid expected [true] but found [false]
+INFO: Тестирование завершено.
