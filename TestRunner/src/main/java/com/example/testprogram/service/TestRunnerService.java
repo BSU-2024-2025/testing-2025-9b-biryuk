@@ -1,5 +1,6 @@
 package com.example.testprogram.service;
 
+import com.example.testprogram.logic.Calculator;
 import com.example.testprogram.logic.CalculatorTest;
 import com.example.testprogram.logic.SimpleParserTest;
 import org.springframework.stereotype.Service;
@@ -18,37 +19,57 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class TestRunnerService {
 
 	private final List<String> executionLogs = new CopyOnWriteArrayList<>();
-	private boolean isRunning = false;
+	private volatile boolean isRunning = false;
+	private volatile boolean isPaused = false;
+
+	private final Calculator calculator = new Calculator();
 
 	public void runTests() {
 		if (isRunning) return;
 
 		isRunning = true;
+		isPaused = false;
 		executionLogs.clear();
-		executionLogs.add("INFO: Запуск тестов...");
+		executionLogs.add("INFO: Инициализация тестового прогона...");
 
 		new Thread(() -> {
 			TestNG testng = new TestNG();
-
-			testng.setTestClasses(new Class[] { CalculatorTest.class, SimpleParserTest.class });
+			testng.setTestClasses(new Class[] {
+					CalculatorTest.class,
+					SimpleParserTest.class,
+			});
 
 			testng.addListener(new CustomTestListener());
 
 			try {
 				testng.run();
 			} catch (Exception e) {
-				executionLogs.add("ERROR: Ошибка при выполнении: " + e.getMessage());
+				executionLogs.add("ERROR: Критическая ошибка: " + e.getMessage());
 			} finally {
 				isRunning = false;
-				executionLogs.add("INFO: Тестирование завершено.");
+				executionLogs.add("INFO: Все тесты завершены.");
 			}
 		}).start();
 	}
 
 	public void stopTests() {
 		if (isRunning) {
-			executionLogs.add("WARNING: Поступила команда остановки. Ожидание завершения текущего теста...");
+			executionLogs.add("WARNING: !!! ПРИНУДИТЕЛЬНАЯ ОСТАНОВКА ПОЛЬЗОВАТЕЛЕМ !!!");
 			isRunning = false;
+		}
+	}
+
+	public void togglePause() {
+		isPaused = !isPaused;
+		executionLogs.add(isPaused ? "INFO: Пауза..." : "INFO: Продолжаем...");
+	}
+
+	public String calculateManually(String expression) {
+		try {
+			double result = calculator.calculate(expression);
+			return "Результат: " + result;
+		} catch (Exception e) {
+			return "Ошибка: " + e.getMessage();
 		}
 	}
 
@@ -67,6 +88,19 @@ public class TestRunnerService {
 	private class CustomTestListener implements ITestListener {
 		@Override
 		public void onTestStart(ITestResult result) {
+			if (!isRunning) {
+				throw new RuntimeException("Stop requested");
+			}
+
+			try {
+				while (isPaused) {
+					Thread.sleep(500);
+				}
+				Thread.sleep(800);
+			} catch (InterruptedException e) {
+				Thread.currentThread().interrupt();
+			}
+
 			executionLogs.add("START: " + result.getName());
 		}
 
@@ -77,12 +111,7 @@ public class TestRunnerService {
 
 		@Override
 		public void onTestFailure(ITestResult result) {
-			executionLogs.add("FAILED: " + result.getName() + " | Ошибка: " + result.getThrowable().getMessage());
-		}
-
-		@Override
-		public void onStart(ITestContext context) {
-			executionLogs.add("SUITE START: " + context.getName());
+			executionLogs.add("FAILED: " + result.getName() + " | " + result.getThrowable().getMessage());
 		}
 	}
 }

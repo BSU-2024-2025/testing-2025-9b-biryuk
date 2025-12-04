@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>23/6/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Nov 22 11:10:41 MSK 2025</td>
+<td>Started on:</td><td>Thu Dec 04 05:14:38 MSK 2025</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (22 ms)</td>
+<tr><td>Total time:</td><td>23 seconds (23358 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,14 +76,55 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 2 * 5, 15.0</td>
+<td><div><pre>java.lang.AssertionError: Ошибка в выражении: 2 * 5 expected [15.0] but found [10.0]
+	at com.example.testprogram.logic.CalculatorTest.testExpressions(CalculatorTest.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:47)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace141427886", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace141427886'><pre>java.lang.AssertionError: Ошибка в выражении: 2 * 5 expected [15.0] but found [10.0]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEquals(Assert.java:698)
+	at com.example.testprogram.logic.CalculatorTest.testExpressions(CalculatorTest.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:47)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+</pre></div></td>
+<td>0</td>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
+<tr>
 <td title='com.example.testprogram.logic.SimpleParserTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.SimpleParserTest<br>Parameters: 1+, true</td>
 <td><div><pre>java.lang.AssertionError: Expression &apos;1+&apos; should be valid expected [true] but found [false]
 	at com.example.testprogram.logic.SimpleParserTest.testExpressions(SimpleParserTest.java:34)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:43)
+	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:47)
 	at java.base/java.lang.Thread.run(Thread.java:1447)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1827108807", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1827108807'><pre>java.lang.AssertionError: Expression &apos;1+&apos; should be valid expected [true] but found [false]
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace655348943", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace655348943'><pre>java.lang.AssertionError: Expression &apos;1+&apos; should be valid expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertTrue(Assert.java:57)
@@ -111,20 +152,20 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
 	at org.testng.TestNG.runSuites(TestNG.java:1114)
 	at org.testng.TestNG.run(TestNG.java:1082)
-	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:43)
+	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:47)
 	at java.base/java.lang.Thread.run(Thread.java:1447)
 </pre></div></td>
 <td>0</td>
-<td>com.example.testprogram.logic.SimpleParserTest@24fd5eaf</td></tr>
+<td>com.example.testprogram.logic.SimpleParserTest@290d182d</td></tr>
 <tr>
 <td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 3 + 4 * 2 / (1 - 5), 2.0</td>
 <td><div><pre>java.lang.AssertionError: Ошибка в выражении: 3 + 4 * 2 / (1 - 5) expected [2.0] but found [1.0]
 	at com.example.testprogram.logic.CalculatorTest.testExpressions(CalculatorTest.java:43)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:43)
+	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:47)
 	at java.base/java.lang.Thread.run(Thread.java:1447)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace357733059", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace357733059'><pre>java.lang.AssertionError: Ошибка в выражении: 3 + 4 * 2 / (1 - 5) expected [2.0] but found [1.0]
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace584759561", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace584759561'><pre>java.lang.AssertionError: Ошибка в выражении: 3 + 4 * 2 / (1 - 5) expected [2.0] but found [1.0]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEquals(Assert.java:698)
@@ -152,20 +193,20 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
 	at org.testng.TestNG.runSuites(TestNG.java:1114)
 	at org.testng.TestNG.run(TestNG.java:1082)
-	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:43)
+	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:47)
 	at java.base/java.lang.Thread.run(Thread.java:1447)
 </pre></div></td>
 <td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
 <tr>
 <td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: a=4;b=2;(a+b)*3, 20.0</td>
 <td><div><pre>java.lang.AssertionError: Ошибка в выражении: a=4;b=2;(a+b)*3 expected [20.0] but found [18.0]
 	at com.example.testprogram.logic.CalculatorTest.testExpressions(CalculatorTest.java:43)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:43)
+	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:47)
 	at java.base/java.lang.Thread.run(Thread.java:1447)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1033947130", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1033947130'><pre>java.lang.AssertionError: Ошибка в выражении: a=4;b=2;(a+b)*3 expected [20.0] but found [18.0]
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace963176812", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace963176812'><pre>java.lang.AssertionError: Ошибка в выражении: a=4;b=2;(a+b)*3 expected [20.0] but found [18.0]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEquals(Assert.java:698)
@@ -193,20 +234,20 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
 	at org.testng.TestNG.runSuites(TestNG.java:1114)
 	at org.testng.TestNG.run(TestNG.java:1082)
-	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:43)
+	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:47)
 	at java.base/java.lang.Thread.run(Thread.java:1447)
 </pre></div></td>
 <td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
 <tr>
 <td title='com.example.testprogram.logic.SimpleParserTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.SimpleParserTest<br>Parameters: 1+2+, true</td>
 <td><div><pre>java.lang.AssertionError: Expression &apos;1+2+&apos; should be valid expected [true] but found [false]
 	at com.example.testprogram.logic.SimpleParserTest.testExpressions(SimpleParserTest.java:34)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:43)
+	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:47)
 	at java.base/java.lang.Thread.run(Thread.java:1447)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1152609352", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1152609352'><pre>java.lang.AssertionError: Expression &apos;1+2+&apos; should be valid expected [true] but found [false]
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1247577876", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1247577876'><pre>java.lang.AssertionError: Expression &apos;1+2+&apos; should be valid expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertTrue(Assert.java:57)
@@ -234,61 +275,20 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
 	at org.testng.TestNG.runSuites(TestNG.java:1114)
 	at org.testng.TestNG.run(TestNG.java:1082)
-	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:43)
+	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:47)
 	at java.base/java.lang.Thread.run(Thread.java:1447)
 </pre></div></td>
 <td>0</td>
-<td>com.example.testprogram.logic.SimpleParserTest@24fd5eaf</td></tr>
-<tr>
-<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 2 * 5, 15.0</td>
-<td><div><pre>java.lang.AssertionError: Ошибка в выражении: 2 * 5 expected [15.0] but found [10.0]
-	at com.example.testprogram.logic.CalculatorTest.testExpressions(CalculatorTest.java:43)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:43)
-	at java.base/java.lang.Thread.run(Thread.java:1447)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2137766388", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2137766388'><pre>java.lang.AssertionError: Ошибка в выражении: 2 * 5 expected [15.0] but found [10.0]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEquals(Assert.java:698)
-	at com.example.testprogram.logic.CalculatorTest.testExpressions(CalculatorTest.java:43)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at org.testng.TestNG.runSuites(TestNG.java:1114)
-	at org.testng.TestNG.run(TestNG.java:1082)
-	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:43)
-	at java.base/java.lang.Thread.run(Thread.java:1447)
-</pre></div></td>
-<td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
+<td>com.example.testprogram.logic.SimpleParserTest@290d182d</td></tr>
 <tr>
 <td title='com.example.testprogram.logic.SimpleParserTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.SimpleParserTest<br>Parameters: +, true</td>
 <td><div><pre>java.lang.AssertionError: Expression &apos;+&apos; should be valid expected [true] but found [false]
 	at com.example.testprogram.logic.SimpleParserTest.testExpressions(SimpleParserTest.java:34)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:43)
+	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:47)
 	at java.base/java.lang.Thread.run(Thread.java:1447)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace492552292", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace492552292'><pre>java.lang.AssertionError: Expression &apos;+&apos; should be valid expected [true] but found [false]
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1669107589", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1669107589'><pre>java.lang.AssertionError: Expression &apos;+&apos; should be valid expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertTrue(Assert.java:57)
@@ -316,11 +316,11 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
 	at org.testng.TestNG.runSuites(TestNG.java:1114)
 	at org.testng.TestNG.run(TestNG.java:1082)
-	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:43)
+	at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:47)
 	at java.base/java.lang.Thread.run(Thread.java:1447)
 </pre></div></td>
 <td>0</td>
-<td>com.example.testprogram.logic.SimpleParserTest@24fd5eaf</td></tr>
+<td>com.example.testprogram.logic.SimpleParserTest@290d182d</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -331,120 +331,120 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 3 * 5 - 7, 8.0</td>
-<td></td>
-<td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
-<tr>
-<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: -5 + 3 , -2.0</td>
-<td></td>
-<td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
-<tr>
-<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: x=5;y=3;x+y*2, 11.0</td>
-<td></td>
-<td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
-<tr>
-<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: (5 + 3), 8.0</td>
-<td></td>
-<td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
-<tr>
-<td title='com.example.testprogram.logic.SimpleParserTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.SimpleParserTest<br>Parameters: 1 //, true</td>
-<td></td>
-<td>0</td>
-<td>com.example.testprogram.logic.SimpleParserTest@24fd5eaf</td></tr>
-<tr>
-<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: x=5;y=10;z=x+y, 15.0</td>
-<td></td>
-<td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
-<tr>
-<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 10 - 2, 8.0</td>
-<td></td>
-<td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
-<tr>
-<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 8 / 2 + 3, 7.0</td>
-<td></td>
-<td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
-<tr>
 <td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 4 * 5, 20.0</td>
 <td></td>
 <td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
-<tr>
-<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: x=10;y=x*2;z=x+y, 30.0</td>
-<td></td>
-<td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
-<tr>
-<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 20 / 4, 5.0</td>
-<td></td>
-<td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
-<tr>
-<td title='com.example.testprogram.logic.SimpleParserTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.SimpleParserTest<br>Parameters: 1+2, true</td>
-<td></td>
-<td>0</td>
-<td>com.example.testprogram.logic.SimpleParserTest@24fd5eaf</td></tr>
-<tr>
-<td title='com.example.testprogram.logic.SimpleParserTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.SimpleParserTest<br>Parameters: 1+2+3, true</td>
-<td></td>
-<td>0</td>
-<td>com.example.testprogram.logic.SimpleParserTest@24fd5eaf</td></tr>
-<tr>
-<td title='com.example.testprogram.logic.SimpleParserTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.SimpleParserTest<br>Parameters: // только комментарий, true</td>
-<td></td>
-<td>0</td>
-<td>com.example.testprogram.logic.SimpleParserTest@24fd5eaf</td></tr>
-<tr>
-<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 10 + 2 * 3, 16.0</td>
-<td></td>
-<td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
 <tr>
 <td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 10 - 2 * 3, 4.0</td>
 <td></td>
 <td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
 <tr>
-<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: (2 + 3) * (4 - 1), 15.0</td>
+<td title='com.example.testprogram.logic.SimpleParserTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.SimpleParserTest<br>Parameters: 1+2+3, true</td>
 <td></td>
 <td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
+<td>com.example.testprogram.logic.SimpleParserTest@290d182d</td></tr>
 <tr>
-<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: ((2 + 3) * 4) / 2, 10.0</td>
+<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 3 * 5 - 7, 8.0</td>
 <td></td>
 <td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
 <tr>
-<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: (10 - 2) * 3, 24.0</td>
+<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 10 + 2 * 3, 16.0</td>
 <td></td>
 <td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
-<tr>
-<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 2 * (3 + 4), 14.0</td>
-<td></td>
-<td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
-<tr>
-<td title='com.example.testprogram.logic.SimpleParserTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.SimpleParserTest<br>Parameters: 1, true</td>
-<td></td>
-<td>0</td>
-<td>com.example.testprogram.logic.SimpleParserTest@24fd5eaf</td></tr>
-<tr>
-<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 10 / 0, Infinity</td>
-<td></td>
-<td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
 <tr>
 <td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: a=2;b=3;c=a*b;d=c+5, 11.0</td>
 <td></td>
 <td>0</td>
-<td>com.example.testprogram.logic.CalculatorTest@4780ae4c</td></tr>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
+<tr>
+<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 2 * (3 + 4), 14.0</td>
+<td></td>
+<td>0</td>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
+<tr>
+<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: ((2 + 3) * 4) / 2, 10.0</td>
+<td></td>
+<td>0</td>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
+<tr>
+<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: x=5;y=3;x+y*2, 11.0</td>
+<td></td>
+<td>0</td>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
+<tr>
+<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 10 - 2, 8.0</td>
+<td></td>
+<td>0</td>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
+<tr>
+<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: (5 + 3), 8.0</td>
+<td></td>
+<td>0</td>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
+<tr>
+<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: (10 - 2) * 3, 24.0</td>
+<td></td>
+<td>0</td>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
+<tr>
+<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: x=10;y=x*2;z=x+y, 30.0</td>
+<td></td>
+<td>0</td>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
+<tr>
+<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 20 / 4, 5.0</td>
+<td></td>
+<td>0</td>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
+<tr>
+<td title='com.example.testprogram.logic.SimpleParserTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.SimpleParserTest<br>Parameters: 1, true</td>
+<td></td>
+<td>0</td>
+<td>com.example.testprogram.logic.SimpleParserTest@290d182d</td></tr>
+<tr>
+<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 8 / 2 + 3, 7.0</td>
+<td></td>
+<td>0</td>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
+<tr>
+<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: x=5;y=10;z=x+y, 15.0</td>
+<td></td>
+<td>0</td>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
+<tr>
+<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: (2 + 3) * (4 - 1), 15.0</td>
+<td></td>
+<td>0</td>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
+<tr>
+<td title='com.example.testprogram.logic.SimpleParserTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.SimpleParserTest<br>Parameters: 1 //, true</td>
+<td></td>
+<td>0</td>
+<td>com.example.testprogram.logic.SimpleParserTest@290d182d</td></tr>
+<tr>
+<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: 10 / 0, Infinity</td>
+<td></td>
+<td>0</td>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
+<tr>
+<td title='com.example.testprogram.logic.SimpleParserTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.SimpleParserTest<br>Parameters: // только комментарий, true</td>
+<td></td>
+<td>0</td>
+<td>com.example.testprogram.logic.SimpleParserTest@290d182d</td></tr>
+<tr>
+<td title='com.example.testprogram.logic.CalculatorTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.CalculatorTest<br>Parameters: -5 + 3 , -2.0</td>
+<td></td>
+<td>0</td>
+<td>com.example.testprogram.logic.CalculatorTest@2d328953</td></tr>
+<tr>
+<td title='com.example.testprogram.logic.SimpleParserTest.testExpressions()'><b>testExpressions</b><br>Test class: com.example.testprogram.logic.SimpleParserTest<br>Parameters: 1+2, true</td>
+<td></td>
+<td>0</td>
+<td>com.example.testprogram.logic.SimpleParserTest@290d182d</td></tr>
 </table><p>
 </body>
 </html>

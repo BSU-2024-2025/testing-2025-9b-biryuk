@@ -2,111 +2,139 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Test Automation Dashboard</title>
+    <title>QA Dashboard</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px; }
-        .controls { margin-bottom: 20px; display: flex; gap: 10px; align-items: center; }
+        :root { --bg: #121212; --panel: #1e1e1e; --text: #e0e0e0; --accent: #007acc; --green: #28a745; --red: #dc3545; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg); color: var(--text); padding: 0; margin: 0; display: flex; height: 100vh; }
 
-        /* Кнопки */
-        button { padding: 10px 20px; font-size: 18px; cursor: pointer; border: none; border-radius: 5px; color: white; }
-        .btn-start { background-color: #28a745; } /* Зеленый */
-        .btn-stop { background-color: #dc3545; }  /* Красный */
-        .btn-pause { background-color: #ffc107; color: black; } /* Желтый */
-        .btn-save { background-color: #007bff; }  /* Синий */
+        /* Layout */
+        .container { display: flex; width: 100%; height: 100%; }
+        .panel { flex: 1; padding: 20px; display: flex; flex-direction: column; border-right: 1px solid #333; }
 
-        /* Окно логов */
+        h2 { border-bottom: 2px solid var(--accent); padding-bottom: 10px; margin-top: 0; }
+
+        /* Manual Testing Section */
+        .input-group { display: flex; gap: 10px; margin-bottom: 20px; }
+        input[type="text"] { flex: 1; padding: 12px; border-radius: 4px; border: 1px solid #444; background: #252526; color: white; font-size: 16px; font-family: monospace; }
+        button { padding: 10px 20px; border: none; border-radius: 4px; color: white; cursor: pointer; font-weight: bold; transition: 0.2s; }
+        button:hover { opacity: 0.8; }
+        .btn-calc { background-color: var(--accent); }
+        .manual-result { background: #252526; padding: 15px; border-radius: 4px; min-height: 50px; border-left: 4px solid var(--accent); }
+
+        /* Auto Testing Section */
+        .controls { display: flex; gap: 10px; margin-bottom: 15px; }
+        .btn-start { background-color: var(--green); }
+        .btn-stop { background-color: var(--red); }
+        .btn-pause { background-color: #ffc107; color: black; }
+        .btn-save { background-color: #6c757d; }
+
         #log-window {
-            width: 100%;
-            height: 400px;
-            background-color: #1e1e1e;
-            color: #00ff00;
-            font-family: 'Courier New', monospace;
+            flex: 1;
+            background-color: black;
+            color: #0f0;
+            font-family: 'Consolas', monospace;
             padding: 15px;
-            overflow-y: scroll; /* Скроллинг */
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow-y: auto;
+            border-radius: 4px;
+            border: 1px solid #333;
+            font-size: 14px;
+            line-height: 1.4;
         }
-
-        /* Иконки (символы) */
-        .icon-play::before { content: "▶"; margin-right: 5px; }
-        .icon-stop::before { content: "■"; margin-right: 5px; }
-        .icon-pause::before { content: "⏸"; margin-right: 5px; }
-        .icon-save::before { content: "💾"; margin-right: 5px; }
     </style>
 </head>
 <body>
 
-<h1>Панель управления тестами (Calculator & Parser)</h1>
+<div class="container">
+    <div class="panel">
+        <h2>🛠 Ручное Тестирование</h2>
+        <p>Введите выражение (например: <code>x=5; y=10; x*y</code>)</p>
 
-<div class="controls">
-    <button class="btn-start icon-play" onclick="startTests()">Запуск</button>
-    <button class="btn-stop icon-stop" onclick="stopTests()">Стоп</button>
-    <button class="btn-pause icon-pause" onclick="togglePause()">Пауза</button>
-    <button class="btn-save icon-save" onclick="saveResults()">Save</button>
-</div>
+        <div class="input-group">
+            <input type="text" id="expressionInput" placeholder="Введите код здесь..." onkeydown="if(event.key==='Enter') sendManual()">
+            <button class="btn-calc" onclick="sendManual()">Вычислить</button>
+        </div>
 
-<h3>Журнал выполнения (Log):</h3>
-<div id="log-window">
-    <div>Ожидание запуска...</div>
+        <div id="manualResult" class="manual-result">Результат отобразится здесь...</div>
+    </div>
+
+    <div class="panel">
+        <h2>Авто-Тесты (TestNG + Selenium)</h2>
+
+        <div class="controls">
+            <button class="btn-start" onclick="control('start')">Запуск</button>
+            <button class="btn-pause" onclick="control('pause')">Пауза</button>
+            <button class="btn-stop" onclick="control('stop')">Стоп</button>
+            <button class="btn-save" onclick="saveResults()">Save Log</button>
+        </div>
+
+        <div id="log-window">
+            <div>Ожидание команды...</div>
+        </div>
+    </div>
 </div>
 
 <script>
     let pollInterval;
-    let isPaused = false;
 
-    function startTests() {
-        fetch('/api/start', { method: 'POST' });
-        document.getElementById('log-window').innerHTML = "<div>Запуск системы...</div>";
-        isPaused = false;
-        // Начинаем опрашивать сервер каждые 500мс
-        if (pollInterval) clearInterval(pollInterval);
-        pollInterval = setInterval(fetchLogs, 500);
+    // Ручной ввод
+    function sendManual() {
+        const expr = document.getElementById('expressionInput').value;
+        fetch('/api/calculate', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ expression: expr })
+        })
+        .then(res => res.json())
+        .then(data => {
+            const resDiv = document.getElementById('manualResult');
+            resDiv.innerText = data.result;
+            resDiv.style.borderLeftColor = data.result.includes("Ошибка") ? "#dc3545" : "#007acc";
+        });
     }
 
-    function stopTests() {
-        fetch('/api/stop', { method: 'POST' });
-        if (pollInterval) clearInterval(pollInterval);
-        appendLog(">>> Тесты остановлены пользователем.");
-    }
+    // Управление автотестами
+    function control(action) {
+        fetch('/api/' + action, { method: 'POST' });
 
-    function togglePause() {
-        isPaused = !isPaused;
-        let btn = document.querySelector('.btn-pause');
-        btn.innerText = isPaused ? "Продолжить" : "Пауза";
-        appendLog(isPaused ? ">>> Интерфейс на паузе (тесты идут в фоне)" : ">>> Интерфейс обновляется");
-    }
-
-    function saveResults() {
-        let filename = prompt("Введите имя файла для сохранения:", "test_results");
-        if (filename) {
-            fetch('/api/save', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({ filename: filename })
-            })
-            .then(response => response.text())
-            .then(data => alert(data));
+        if (action === 'start') {
+            document.getElementById('log-window').innerHTML = "<div>Инициализация...</div>";
+            if (pollInterval) clearInterval(pollInterval);
+            pollInterval = setInterval(fetchLogs, 500); // Опрос каждые 0.5 сек
+        }
+        if (action === 'stop') {
+             appendLog("Отправлена команда остановки...");
         }
     }
 
     function fetchLogs() {
-        if (isPaused) return;
-
         fetch('/api/logs')
-            .then(response => response.json())
+            .then(res => res.json())
             .then(logs => {
                 const logWindow = document.getElementById('log-window');
-                logWindow.innerHTML = logs.map(line => `<div>${line}</div>`).join('');
-                // Автоскролл вниз
+                logWindow.innerHTML = logs.map(line => {
+                    let color = 'inherit';
+                    if (line.includes('PASSED')) color = '#28a745';
+                    if (line.includes('FAILED') || line.includes('ERROR')) color = '#dc3545';
+                    if (line.includes('START')) color = '#ffc107';
+                    return `<div style="color:${color}">${line}</div>`;
+                }).join('');
                 logWindow.scrollTop = logWindow.scrollHeight;
             });
     }
 
+    function saveResults() {
+        let name = prompt("Имя файла:");
+        if (name) fetch('/api/save', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ filename: name })
+        });
+    }
+
     function appendLog(msg) {
-        const logWindow = document.getElementById('log-window');
-        logWindow.innerHTML += `<div>${msg}</div>`;
-        logWindow.scrollTop = logWindow.scrollHeight;
+        document.getElementById('log-window').innerHTML += `<div>${msg}</div>`;
     }
 </script>
+
 </body>
 </html>

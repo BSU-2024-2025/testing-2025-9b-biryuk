@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="29" passed="23" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-22T11:10:41 MSK" name="Command line suite" finished-at="2025-11-22T11:10:41 MSK" duration-ms="22">
+  <suite started-at="2025-12-04T05:14:38 MSK" name="Command line suite" finished-at="2025-12-04T05:15:02 MSK" duration-ms="23358">
     <groups>
     </groups>
-    <test started-at="2025-11-22T11:10:41 MSK" name="Command line test" finished-at="2025-11-22T11:10:41 MSK" duration-ms="22">
+    <test started-at="2025-12-04T05:14:38 MSK" name="Command line test" finished-at="2025-12-04T05:15:02 MSK" duration-ms="23358">
       <class name="com.example.testprogram.logic.SimpleParserTest">
-        <test-method signature="testExpressions(java.lang.String,boolean)[pri:0, instance:com.example.testprogram.logic.SimpleParserTest@24fd5eaf]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionProvider" finished-at="2025-11-22T11:10:41 MSK" duration-ms="1" status="PASS">
+        <test-method signature="testExpressions(java.lang.String,boolean)[pri:0, instance:com.example.testprogram.logic.SimpleParserTest@290d182d]" started-at="2025-12-04T05:14:55 MSK" name="testExpressions" data-provider="expressionProvider" finished-at="2025-12-04T05:14:56 MSK" duration-ms="806" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,23 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,boolean)[pri:0, instance:com.example.testprogram.logic.SimpleParserTest@24fd5eaf]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionProvider" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1 //]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,boolean)[pri:0, instance:com.example.testprogram.logic.SimpleParserTest@24fd5eaf]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionProvider" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
+        <test-method signature="testExpressions(java.lang.String,boolean)[pri:0, instance:com.example.testprogram.logic.SimpleParserTest@290d182d]" started-at="2025-12-04T05:14:56 MSK" name="testExpressions" data-provider="expressionProvider" finished-at="2025-12-04T05:14:57 MSK" duration-ms="801" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -55,7 +39,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,boolean)[pri:0, instance:com.example.testprogram.logic.SimpleParserTest@24fd5eaf]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionProvider" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
+        <test-method signature="testExpressions(java.lang.String,boolean)[pri:0, instance:com.example.testprogram.logic.SimpleParserTest@290d182d]" started-at="2025-12-04T05:14:57 MSK" name="testExpressions" data-provider="expressionProvider" finished-at="2025-12-04T05:14:58 MSK" duration-ms="803" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -71,7 +55,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,boolean)[pri:0, instance:com.example.testprogram.logic.SimpleParserTest@24fd5eaf]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionProvider" finished-at="2025-11-22T11:10:41 MSK" duration-ms="1" status="PASS">
+        <test-method signature="testExpressions(java.lang.String,boolean)[pri:0, instance:com.example.testprogram.logic.SimpleParserTest@290d182d]" started-at="2025-12-04T05:14:58 MSK" name="testExpressions" data-provider="expressionProvider" finished-at="2025-12-04T05:14:59 MSK" duration-ms="806" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1 //]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExpressions -->
+        <test-method signature="testExpressions(java.lang.String,boolean)[pri:0, instance:com.example.testprogram.logic.SimpleParserTest@290d182d]" started-at="2025-12-04T05:14:59 MSK" name="testExpressions" data-provider="expressionProvider" finished-at="2025-12-04T05:14:59 MSK" duration-ms="805" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -87,115 +87,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,boolean)[pri:0, instance:com.example.testprogram.logic.SimpleParserTest@24fd5eaf]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionProvider" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1+]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expression '1+' should be valid expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expression '1+' should be valid expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at com.example.testprogram.logic.SimpleParserTest.testExpressions(SimpleParserTest.java:34)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:43)
-at java.base/java.lang.Thread.run(Thread.java:1447)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,boolean)[pri:0, instance:com.example.testprogram.logic.SimpleParserTest@24fd5eaf]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionProvider" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1+2+]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expression '1+2+' should be valid expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expression '1+2+' should be valid expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at com.example.testprogram.logic.SimpleParserTest.testExpressions(SimpleParserTest.java:34)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:43)
-at java.base/java.lang.Thread.run(Thread.java:1447)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,boolean)[pri:0, instance:com.example.testprogram.logic.SimpleParserTest@24fd5eaf]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionProvider" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="FAIL">
+        <test-method signature="testExpressions(java.lang.String,boolean)[pri:0, instance:com.example.testprogram.logic.SimpleParserTest@290d182d]" started-at="2025-12-04T05:14:59 MSK" name="testExpressions" data-provider="expressionProvider" finished-at="2025-12-04T05:15:00 MSK" duration-ms="806" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -241,7 +133,115 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
 at org.testng.TestNG.runSuites(TestNG.java:1114)
 at org.testng.TestNG.run(TestNG.java:1082)
-at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:43)
+at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:47)
+at java.base/java.lang.Thread.run(Thread.java:1447)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExpressions -->
+        <test-method signature="testExpressions(java.lang.String,boolean)[pri:0, instance:com.example.testprogram.logic.SimpleParserTest@290d182d]" started-at="2025-12-04T05:15:00 MSK" name="testExpressions" data-provider="expressionProvider" finished-at="2025-12-04T05:15:01 MSK" duration-ms="803" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expression '1+' should be valid expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expression '1+' should be valid expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.example.testprogram.logic.SimpleParserTest.testExpressions(SimpleParserTest.java:34)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:47)
+at java.base/java.lang.Thread.run(Thread.java:1447)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExpressions -->
+        <test-method signature="testExpressions(java.lang.String,boolean)[pri:0, instance:com.example.testprogram.logic.SimpleParserTest@290d182d]" started-at="2025-12-04T05:15:01 MSK" name="testExpressions" data-provider="expressionProvider" finished-at="2025-12-04T05:15:02 MSK" duration-ms="801" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1+2+]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expression '1+2+' should be valid expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expression '1+2+' should be valid expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.example.testprogram.logic.SimpleParserTest.testExpressions(SimpleParserTest.java:34)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:47)
 at java.base/java.lang.Thread.run(Thread.java:1447)
 ]]>
             </full-stacktrace>
@@ -251,7 +251,7 @@ at java.base/java.lang.Thread.run(Thread.java:1447)
         </test-method> <!-- testExpressions -->
       </class> <!-- com.example.testprogram.logic.SimpleParserTest -->
       <class name="com.example.testprogram.logic.CalculatorTest">
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="2" status="PASS">
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:38 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:39 MSK" duration-ms="806" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -267,7 +267,7 @@ at java.base/java.lang.Thread.run(Thread.java:1447)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:39 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:40 MSK" duration-ms="806" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -283,7 +283,7 @@ at java.base/java.lang.Thread.run(Thread.java:1447)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:40 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:41 MSK" duration-ms="802" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -299,7 +299,7 @@ at java.base/java.lang.Thread.run(Thread.java:1447)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:42 MSK" duration-ms="806" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -315,7 +315,7 @@ at java.base/java.lang.Thread.run(Thread.java:1447)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:42 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:42 MSK" duration-ms="803" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -331,55 +331,7 @@ at java.base/java.lang.Thread.run(Thread.java:1447)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[3 * 5 - 7]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[8.0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[10 + 2 * 3]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[16.0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[10 - 2 * 3]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[4.0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="FAIL">
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:42 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:43 MSK" duration-ms="806" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -425,7 +377,7 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
 at org.testng.TestNG.runSuites(TestNG.java:1114)
 at org.testng.TestNG.run(TestNG.java:1082)
-at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:43)
+at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:47)
 at java.base/java.lang.Thread.run(Thread.java:1447)
 ]]>
             </full-stacktrace>
@@ -433,11 +385,11 @@ at java.base/java.lang.Thread.run(Thread.java:1447)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:43 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:44 MSK" duration-ms="804" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[(5 + 3)]]>
+                <![CDATA[3 * 5 - 7]]>
               </value>
             </param>
             <param index="1">
@@ -449,7 +401,39 @@ at java.base/java.lang.Thread.run(Thread.java:1447)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:44 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:45 MSK" duration-ms="806" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10 + 2 * 3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[16.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExpressions -->
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:45 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:46 MSK" duration-ms="805" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10 - 2 * 3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExpressions -->
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:46 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:46 MSK" duration-ms="803" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -465,39 +449,23 @@ at java.base/java.lang.Thread.run(Thread.java:1447)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:46 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:47 MSK" duration-ms="802" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[(2 + 3) * (4 - 1)]]>
+                <![CDATA[(5 + 3)]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[15.0]]>
+                <![CDATA[8.0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[((2 + 3) * 4) / 2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[10.0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:47 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:48 MSK" duration-ms="806" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -513,7 +481,7 @@ at java.base/java.lang.Thread.run(Thread.java:1447)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:48 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:49 MSK" duration-ms="803" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -529,27 +497,11 @@ at java.base/java.lang.Thread.run(Thread.java:1447)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:49 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:50 MSK" duration-ms="802" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[x=5;y=3;x+y*2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[11.0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[x=5;y=10;z=x+y]]>
+                <![CDATA[(2 + 3) * (4 - 1)]]>
               </value>
             </param>
             <param index="1">
@@ -561,39 +513,23 @@ at java.base/java.lang.Thread.run(Thread.java:1447)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:50 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:50 MSK" duration-ms="801" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[x=10;y=x*2;z=x+y]]>
+                <![CDATA[((2 + 3) * 4) / 2]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[30.0]]>
+                <![CDATA[10.0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[a=2;b=3;c=a*b;d=c+5]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[11.0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="FAIL">
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:50 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:51 MSK" duration-ms="806" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -639,7 +575,7 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
 at org.testng.TestNG.runSuites(TestNG.java:1114)
 at org.testng.TestNG.run(TestNG.java:1082)
-at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:43)
+at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:47)
 at java.base/java.lang.Thread.run(Thread.java:1447)
 ]]>
             </full-stacktrace>
@@ -647,7 +583,71 @@ at java.base/java.lang.Thread.run(Thread.java:1447)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testExpressions -->
-        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@4780ae4c]" started-at="2025-11-22T11:10:41 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-11-22T11:10:41 MSK" duration-ms="0" status="FAIL">
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:51 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:52 MSK" duration-ms="806" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[x=5;y=10;z=x+y]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[15.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExpressions -->
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:52 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:53 MSK" duration-ms="806" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[a=2;b=3;c=a*b;d=c+5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[11.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExpressions -->
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:53 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:54 MSK" duration-ms="804" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[x=10;y=x*2;z=x+y]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[30.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExpressions -->
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:54 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:54 MSK" duration-ms="806" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[x=5;y=3;x+y*2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[11.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExpressions -->
+        <test-method signature="testExpressions(java.lang.String,double)[pri:0, instance:com.example.testprogram.logic.CalculatorTest@2d328953]" started-at="2025-12-04T05:14:54 MSK" name="testExpressions" data-provider="expressionData" finished-at="2025-12-04T05:14:55 MSK" duration-ms="806" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -693,7 +693,7 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
 at org.testng.TestNG.runSuites(TestNG.java:1114)
 at org.testng.TestNG.run(TestNG.java:1082)
-at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:43)
+at com.example.testprogram.service.TestRunnerService.lambda$runTests$0(TestRunnerService.java:47)
 at java.base/java.lang.Thread.run(Thread.java:1447)
 ]]>
             </full-stacktrace>
