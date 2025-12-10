@@ -2,139 +2,199 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>QA Dashboard</title>
+    <title>IDE</title>
     <style>
-        :root { --bg: #121212; --panel: #1e1e1e; --text: #e0e0e0; --accent: #007acc; --green: #28a745; --red: #dc3545; }
-        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg); color: var(--text); padding: 0; margin: 0; display: flex; height: 100vh; }
+        :root { --bg: #1e1e1e; --panel: #252526; --text: #d4d4d4; --green: #28a745; --red: #dc3545; --yellow: #ffc107; --border: #333; }
+        body { font-family: 'Consolas', monospace; background-color: var(--bg); color: var(--text); margin: 0; display: flex; height: 100vh; overflow: hidden; }
 
-        /* Layout */
-        .container { display: flex; width: 100%; height: 100%; }
-        .panel { flex: 1; padding: 20px; display: flex; flex-direction: column; border-right: 1px solid #333; }
+        /* ОСНОВНОЙ ЛЕЙАУТ */
+        .main-col { display: flex; flex-direction: column; width: 70%; border-right: 1px solid var(--border); }
+        .side-col { width: 30%; background: var(--panel); display: flex; flex-direction: column; }
 
-        h2 { border-bottom: 2px solid var(--accent); padding-bottom: 10px; margin-top: 0; }
+        /* СЕКЦИИ */
+        .editor-section { flex: 2; display: flex; flex-direction: column; border-bottom: 1px solid var(--border); }
+        .console-section { flex: 1; display: flex; flex-direction: column; background: #000; }
 
-        /* Manual Testing Section */
-        .input-group { display: flex; gap: 10px; margin-bottom: 20px; }
-        input[type="text"] { flex: 1; padding: 12px; border-radius: 4px; border: 1px solid #444; background: #252526; color: white; font-size: 16px; font-family: monospace; }
-        button { padding: 10px 20px; border: none; border-radius: 4px; color: white; cursor: pointer; font-weight: bold; transition: 0.2s; }
-        button:hover { opacity: 0.8; }
-        .btn-calc { background-color: var(--accent); }
-        .manual-result { background: #252526; padding: 15px; border-radius: 4px; min-height: 50px; border-left: 4px solid var(--accent); }
+        .toolbar { background: #333; padding: 8px; display: flex; gap: 10px; align-items: center; justify-content: space-between; font-size: 14px;}
+        .toolbar-title { font-weight: bold; color: #aaa; text-transform: uppercase; font-size: 12px; }
 
-        /* Auto Testing Section */
-        .controls { display: flex; gap: 10px; margin-bottom: 15px; }
-        .btn-start { background-color: var(--green); }
+        /* КОМПОНЕНТЫ */
+        textarea#codeEditor { flex: 1; background-color: var(--bg); color: #9cdcfe; border: none; padding: 15px; resize: none; font-size: 16px; outline: none; line-height: 1.5; }
+        #consoleOutput { flex: 1; padding: 10px; overflow-y: auto; font-size: 13px; font-family: 'Courier New', monospace; }
+        #varsOutput { flex: 1; padding: 10px; overflow-y: auto; }
+
+        /* КНОПКИ */
+        button { padding: 5px 10px; border: none; color: white; cursor: pointer; font-weight: bold; border-radius: 3px; font-size: 12px; transition: opacity 0.2s; }
+        button:hover { opacity: 0.9; }
+        button:disabled { opacity: 0.4; cursor: not-allowed; }
+        .btn-run { background-color: var(--green); }
         .btn-stop { background-color: var(--red); }
-        .btn-pause { background-color: #ffc107; color: black; }
-        .btn-save { background-color: #6c757d; }
+        .btn-pause { background-color: var(--yellow); color: black; }
+        .btn-clear { background-color: #555; }
 
-        #log-window {
-            flex: 1;
-            background-color: black;
-            color: #0f0;
-            font-family: 'Consolas', monospace;
-            padding: 15px;
-            overflow-y: auto;
-            border-radius: 4px;
-            border: 1px solid #333;
-            font-size: 14px;
-            line-height: 1.4;
-        }
+        /* ЛОГИ И ТАБЛИЦЫ */
+        .log-entry { margin-bottom: 2px; }
+        .var-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .var-table th { text-align: left; border-bottom: 1px solid #555; color: #aaa; padding: 4px; }
+        .var-table td { padding: 4px; border-bottom: 1px solid #333; }
+        .val-num { color: #b5cea8; }
+        .val-arr { color: #ce9178; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="panel">
-        <h2>🛠 Ручное Тестирование</h2>
-        <p>Введите выражение (например: <code>x=5; y=10; x*y</code>)</p>
-
-        <div class="input-group">
-            <input type="text" id="expressionInput" placeholder="Введите код здесь..." onkeydown="if(event.key==='Enter') sendManual()">
-            <button class="btn-calc" onclick="sendManual()">Вычислить</button>
+<div class="main-col">
+    <div class="editor-section">
+        <div class="toolbar">
+            <div>
+                <button id="btnRun" class="btn-run" onclick="startScript()">RUN</button>
+                <button id="btnPause" class="btn-pause" onclick="pauseScript()" disabled>PAUSE</button>
+                <button id="btnStop" class="btn-stop" onclick="stopScript()" disabled>STOP</button>
+            </div>
+            <span class="toolbar-title">Source Code</span>
         </div>
+        <textarea id="codeEditor" spellcheck="false">
+a[5] = {10, 20, 5, 40, 0};
 
-        <div id="manualResult" class="manual-result">Результат отобразится здесь...</div>
+mx = max(a);
+mn = min(a);
+print(mx);
+print(mn);
+
+i = 0;
+while(i < 5) {
+   delay(1);
+   val = a[i];
+   a[i] = val + 1;
+   print(val);
+   i = i + 1;
+}
+
+t = min(100, 50, 200);
+print(t);
+        </textarea>
     </div>
 
-    <div class="panel">
-        <h2>Авто-Тесты (TestNG + Selenium)</h2>
-
-        <div class="controls">
-            <button class="btn-start" onclick="control('start')">Запуск</button>
-            <button class="btn-pause" onclick="control('pause')">Пауза</button>
-            <button class="btn-stop" onclick="control('stop')">Стоп</button>
-            <button class="btn-save" onclick="saveResults()">Save Log</button>
+    <div class="console-section">
+        <div class="toolbar" style="background: #252526; min-height: 20px; padding: 4px 10px;">
+            <span class="toolbar-title">Console Output</span>
+            <button class="btn-clear" onclick="clearConsole()">Clear</button>
         </div>
+        <div id="consoleOutput"></div>
+    </div>
+</div>
 
-        <div id="log-window">
-            <div>Ожидание команды...</div>
-        </div>
+<div class="side-col">
+    <div class="toolbar">
+        <span class="toolbar-title">Variables Watcher</span>
+        <span id="pidDisplay" style="font-size: 10px; color: #666;">ID: --</span>
+    </div>
+    <div id="varsOutput">
+        <table class="var-table">
+            <thead><tr><th>Name</th><th>Value</th></tr></thead>
+            <tbody id="varsBody">
+            </tbody>
+        </table>
     </div>
 </div>
 
 <script>
-    let pollInterval;
+    const processId = 'proc_' + Math.random().toString(36).substr(2, 9);
+    document.getElementById('pidDisplay').innerText = "ID: " + processId;
+    let eventSource = null;
 
-    // Ручной ввод
-    function sendManual() {
-        const expr = document.getElementById('expressionInput').value;
-        fetch('/api/calculate', {
+    function log(msg, type = 'normal') {
+        const consoleDiv = document.getElementById('consoleOutput');
+        let color = '#ccc';
+        if (type === 'system') color = '#569cd6';
+        if (type === 'error') color = '#f44336';
+        consoleDiv.innerHTML += `<div class="log-entry" style="color: ${color}">${msg}</div>`;
+        consoleDiv.scrollTop = consoleDiv.scrollHeight;
+    }
+
+    function updateVars(jsonStr) {
+        try {
+            const data = JSON.parse(jsonStr);
+            const tbody = document.getElementById('varsBody');
+            tbody.innerHTML = '';
+
+            for (const [key, val] of Object.entries(data.scalars)) {
+                tbody.innerHTML += `<tr><td>${key}</td><td class="val-num">${val}</td></tr>`;
+            }
+            for (const [key, val] of Object.entries(data.arrays)) {
+                tbody.innerHTML += `<tr><td>${key} [${val.length}]</td><td class="val-arr">${JSON.stringify(val)}</td></tr>`;
+            }
+        } catch (e) { console.error("Parse var error", e); }
+    }
+
+    function clearConsole() {
+        document.getElementById('consoleOutput').innerHTML = '';
+        document.getElementById('varsBody').innerHTML = '';
+    }
+
+    function setControlsState(isRunning) {
+        document.getElementById('btnRun').disabled = isRunning;
+        document.getElementById('btnPause').disabled = !isRunning;
+        document.getElementById('btnStop').disabled = !isRunning;
+        if (!isRunning) document.getElementById('btnPause').innerText = "PAUSE";
+    }
+
+    function startScript() {
+        const code = document.getElementById('codeEditor').value;
+        if (!code) return;
+        clearConsole();
+        log("> Connecting...", "system");
+        setControlsState(true);
+
+        const url = `/api/stream-script?processId=${processId}&code=${encodeURIComponent(code)}`;
+        if (eventSource) eventSource.close();
+        eventSource = new EventSource(url);
+
+        eventSource.onmessage = function(event) {
+            const data = event.data;
+            if (data.startsWith("[SYSTEM]:")) {
+                log(data.replace("[SYSTEM]:", ""), "system");
+            } else if (data.startsWith("[ERROR]:")) {
+                log(data.replace("[ERROR]:", ""), "error");
+            } else if (data.startsWith("[VARS]:")) {
+                // Пришли данные о переменных
+                updateVars(data.replace("[VARS]:", ""));
+            } else {
+                log(data);
+            }
+        };
+
+        eventSource.onerror = function() {
+            if (eventSource.readyState === EventSource.CLOSED) {
+                log("Script finished.", "system");
+            }
+            stopConnection();
+        };
+    }
+
+    function stopConnection() {
+        if (eventSource) { eventSource.close(); eventSource = null; }
+        setControlsState(false);
+    }
+
+    function pauseScript() {
+        fetch('/api/script/pause', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({ expression: expr })
-        })
-        .then(res => res.json())
-        .then(data => {
-            const resDiv = document.getElementById('manualResult');
-            resDiv.innerText = data.result;
-            resDiv.style.borderLeftColor = data.result.includes("Ошибка") ? "#dc3545" : "#007acc";
+            body: JSON.stringify({ processId: processId })
+        }).then(() => {
+            const btn = document.getElementById('btnPause');
+            btn.innerText = (btn.innerText === "PAUSE") ? "RESUME" : "PAUSE";
         });
     }
 
-    // Управление автотестами
-    function control(action) {
-        fetch('/api/' + action, { method: 'POST' });
-
-        if (action === 'start') {
-            document.getElementById('log-window').innerHTML = "<div>Инициализация...</div>";
-            if (pollInterval) clearInterval(pollInterval);
-            pollInterval = setInterval(fetchLogs, 500); // Опрос каждые 0.5 сек
-        }
-        if (action === 'stop') {
-             appendLog("Отправлена команда остановки...");
-        }
-    }
-
-    function fetchLogs() {
-        fetch('/api/logs')
-            .then(res => res.json())
-            .then(logs => {
-                const logWindow = document.getElementById('log-window');
-                logWindow.innerHTML = logs.map(line => {
-                    let color = 'inherit';
-                    if (line.includes('PASSED')) color = '#28a745';
-                    if (line.includes('FAILED') || line.includes('ERROR')) color = '#dc3545';
-                    if (line.includes('START')) color = '#ffc107';
-                    return `<div style="color:${color}">${line}</div>`;
-                }).join('');
-                logWindow.scrollTop = logWindow.scrollHeight;
-            });
-    }
-
-    function saveResults() {
-        let name = prompt("Имя файла:");
-        if (name) fetch('/api/save', {
+    function stopScript() {
+        fetch('/api/script/stop', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({ filename: name })
-        });
-    }
-
-    function appendLog(msg) {
-        document.getElementById('log-window').innerHTML += `<div>${msg}</div>`;
+            body: JSON.stringify({ processId: processId })
+        }).then(() => log("> Stop sent.", "system"));
     }
 </script>
-
 </body>
 </html>

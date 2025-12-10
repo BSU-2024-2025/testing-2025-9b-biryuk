@@ -3,16 +3,16 @@
 <suite name="Failed suite [Command line suite]">
   <test thread-count="5" name="Command line test(failed)">
     <classes>
-      <class name="com.example.testprogram.logic.CalculatorTest">
-        <methods>
-          <include name="testExpressions" invocation-numbers="20 5 15"/>
-        </methods>
-      </class> <!-- com.example.testprogram.logic.CalculatorTest -->
       <class name="com.example.testprogram.logic.SimpleParserTest">
         <methods>
           <include name="testExpressions" invocation-numbers="5 6 7"/>
         </methods>
       </class> <!-- com.example.testprogram.logic.SimpleParserTest -->
+      <class name="com.example.testprogram.logic.CalculatorTest">
+        <methods>
+          <include name="testExpressions" invocation-numbers="20 5 15"/>
+        </methods>
+      </class> <!-- com.example.testprogram.logic.CalculatorTest -->
     </classes>
   </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [Command line suite] -->

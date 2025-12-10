@@ -1,10 +1,10 @@
 package com.example.testprogram.controller;
 
-import com.example.testprogram.service.TestRunnerService;
+import com.example.testprogram.service.ScriptManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
-import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -12,32 +12,20 @@ import java.util.Map;
 public class TestController {
 
     @Autowired
-    private TestRunnerService testRunnerService;
+    private ScriptManagerService scriptManagerService;
 
-    @PostMapping("/start")
-    public void start() { testRunnerService.runTests(); }
-
-    @PostMapping("/stop")
-    public void stop() { testRunnerService.stopTests(); }
-
-    @PostMapping("/pause")
-    public void pause() { testRunnerService.togglePause(); }
-
-    @GetMapping("/logs")
-    public List<String> logs() { return testRunnerService.getLogs(); }
-
-    // Новый метод для ручного ввода
-    @PostMapping("/calculate")
-    public Map<String, String> calculate(@RequestBody Map<String, String> payload) {
-        String result = testRunnerService.calculateManually(payload.get("expression"));
-        return Map.of("result", result);
+    @GetMapping("/stream-script")
+    public SseEmitter streamScript(@RequestParam String processId, @RequestParam String code) {
+        return scriptManagerService.executeScript(processId, code);
     }
 
-    @PostMapping("/save")
-    public String save(@RequestBody Map<String, String> payload) {
-        try {
-            testRunnerService.saveResults(payload.get("filename"));
-            return "Saved";
-        } catch (Exception e) { return "Error"; }
+    @PostMapping("/script/stop")
+    public void stopScript(@RequestBody Map<String, String> payload) {
+        scriptManagerService.stopScript(payload.get("processId"));
+    }
+
+    @PostMapping("/script/pause")
+    public void pauseScript(@RequestBody Map<String, String> payload) {
+        scriptManagerService.pauseScript(payload.get("processId"));
     }
 }
