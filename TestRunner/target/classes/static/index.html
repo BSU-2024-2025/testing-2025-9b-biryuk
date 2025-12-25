@@ -54,24 +54,7 @@
             <span class="toolbar-title">Source Code</span>
         </div>
         <textarea id="codeEditor" spellcheck="false">
-a[5] = {10, 20, 5, 40, 0};
 
-mx = max(a);
-mn = min(a);
-print(mx);
-print(mn);
-
-i = 0;
-while(i < 5) {
-   delay(1);
-   val = a[i];
-   a[i] = val + 1;
-   print(val);
-   i = i + 1;
-}
-
-t = min(100, 50, 200);
-print(t);
         </textarea>
     </div>
 
@@ -164,12 +147,13 @@ print(t);
             }
         };
 
-        eventSource.onerror = function() {
-            if (eventSource.readyState === EventSource.CLOSED) {
-                log("Script finished.", "system");
-            }
-            stopConnection();
-        };
+eventSource.onerror = function() {
+    if (eventSource.readyState === EventSource.CLOSED) {
+        // Измените "Script finished." на "Execution finished." для единообразия
+        log("Execution finished.", "system");
+    }
+    stopConnection();
+};
     }
 
     function stopConnection() {
